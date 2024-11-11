@@ -1,0 +1,6 @@
+.home{
+  display: grid;
+  grid-template-rows: 70px auto;
+  overflow-y: hidden;
+  width: 100%;
+}

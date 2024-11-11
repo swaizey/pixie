@@ -1,0 +1,38 @@
+.profilePic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.pic{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pic img{
+    width:80% ;
+    height:80% ;
+    border-radius: 50%;
+}
+.profilePic button{
+    padding: 4px 8px;
+    background-color: rgb(19, 238, 19);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: wheat;
+    font-weight: bold;
+}
+.profilePic p{
+    background-color: rgba(233, 10, 10, 0.76);
+    border: 2px solid red;
+    padding: 4px 7px;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}

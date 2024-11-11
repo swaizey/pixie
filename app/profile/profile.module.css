@@ -1,0 +1,38 @@
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    overflow-y: auto;
+
+}
+.profileContainer a{
+    color: black;
+    text-decoration: none;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.profileContainer button{
+    padding: 8px;
+    border: none;
+    margin: 3px;
+}
+.history{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.history button{
+    width: 19%;
+}

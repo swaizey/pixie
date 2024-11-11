@@ -1,0 +1,23 @@
+
+.home{
+    overflow-y: auto;
+}
+.post{
+    position: relative;
+
+}
+.post img{
+    width: 100%;
+}
+.icon{
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.icon svg{
+    font-size: 30px;
+    color: white;
+   
+}

@@ -1,0 +1,30 @@
+.home{
+    display: grid;
+    grid-template-rows: 70px auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+.friendNav{
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 10px;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    border-radius: 5px;
+    margin: 0 5px;
+   background-color: rgba(197, 192, 192, 0.192);
+   align-items: center;
+}
+.search input{
+    background:transparent;
+    outline: none;
+    border: none;
+}

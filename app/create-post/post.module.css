@@ -1,0 +1,42 @@
+.cam{
+   
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-webcam-class{
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    bottom: -130px;
+    left: 60%;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: -50px;
+    margin-right: -50px;
+    border: none;
+    background-color: white;
+}
+.btN{
+    position: absolute;
+    top:   68%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 50%;
+    margin-left: -50px;
+    margin-right: -50px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.966);
+}
+.re{
+    position: absolute;
+    top: 53%;
+    left: 60%;
+    margin-left: 70px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+}

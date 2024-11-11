@@ -1,0 +1,15 @@
+.sendMdg{
+    width: 80%;
+    margin:auto;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sendMdg input{
+    border: none;
+    outline: none;
+    width: 80%;
+}

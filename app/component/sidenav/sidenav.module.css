@@ -1,0 +1,12 @@
+.sidenav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    
+}
+.sidenav svg{
+    margin: 10px;
+    
+}

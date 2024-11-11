@@ -1,0 +1,85 @@
+.chat{
+    height: 80vh;
+    overflow-y: auto;
+    background-color: rgb(245, 242, 242);
+    display: grid;
+    grid-template-rows: 80px auto;
+  
+}
+.nav, .navInfo, .chatInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid rgb(231, 228, 228);
+}
+.nav svg{
+    font-size: 25px;
+}
+.navInfo{
+    width: 80%;
+}
+.navInfo div{
+    width: 90%;
+  
+}
+.navInfo div p:nth-child(1){
+    font-weight: bold; 
+}
+.navInfo div p:nth-child(2){
+    font-size: 13px;
+    color: grey; 
+}
+.navInfo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.chatContiner{
+    overflow-y: auto;
+}
+.chatInfo{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.chatInfo img{
+    border-radius: 100%;
+}
+.chatInfo p:nth-child(4), .chatInfo p:nth-child(3){
+    color: grey;
+    font-size: 13px;
+}
+.chats{
+    display: grid;   
+    width: 100%;
+
+}
+.me{
+    align-self: right;
+    justify-self: right;
+    background-color: white;
+}
+.other{
+    align-self: left;
+    justify-self: left;
+    background-color: rgb(21, 91, 241);
+    
+}
+
+.msgs{
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.msgs span{
+    font-size: 10px;
+    color: grey;
+}
+.other span{
+    color: white;   
+}

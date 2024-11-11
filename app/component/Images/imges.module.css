@@ -1,0 +1,136 @@
+.img{
+    overflow-y: scroll;
+   display: flex;
+   height: 90%;
+   align-items: center;
+   justify-content: center;
+   padding-top: 10rem;
+   margin-left: 5%;
+
+}
+.img img{
+    margin:0 4px;
+}
+@media only screen and (max-width: 1024px) {
+  .img {
+  padding-top: 17rem;
+       
+  }
+  .img img{
+      width: 300px;
+      height: 240px;
+  }
+
+}
+@media only screen and (max-width: 912px) {
+  .img {
+  padding-top: 25rem;
+       
+  }
+  .img img{
+    width: 269px;
+    height: 260px;
+  }
+
+}
+@media only screen and (max-width: 853px) {
+  .img {
+  padding-top: 25rem;
+       
+  }
+  .img img{
+    width: 250px;
+    height: 240px;
+  }
+
+}
+@media only screen and (max-width: 820px) {
+    .img {
+    padding-top: 17rem;
+           
+    }
+    .img img{
+      width: 239px;
+      height: 200px;
+    }
+ 
+  }
+
+@media only screen and (max-width: 768px) {
+    .img {
+    padding-top: 27rem;
+    
+     
+    }
+    .img img{
+        width: 223px;
+        height: 200px;
+    }
+ 
+  }
+@media only screen and (max-width: 540px) {
+    .img {
+    padding-top: 1rem;
+      
+     
+    }
+    .img img{
+        width: 85px;
+        height: 85px;
+    }
+ 
+  }
+@media only screen and (max-width: 430px) {
+    .img {
+    padding-top: 1rem;
+      
+     
+    }
+    .img img{
+        width: 116px;
+    }
+ 
+  }
+@media only screen and (max-width: 414px) {
+
+    .img img{
+        width: 111px;
+    }
+ 
+  }
+@media only screen and (max-width: 390px) {
+    .img {
+    padding-top: 3rem;
+      
+    }
+    .img img{
+        width: 102px;
+    }
+  }
+@media only screen and (max-width: 375px) {
+    .img {
+    padding-top: 14rem;
+          }
+    .img img{
+        width: 99px;
+    }
+  }
+@media only screen and (max-width: 360px) {
+    .img {
+    padding-top: 9rem;
+          }
+    .img img{
+        width: 96px;
+    }
+  }
+@media only screen and (max-width: 344px) {
+    
+    .img img{
+        width: 90px;
+        height: 115px;
+    }
+  }
+
+
+
+
