@@ -39,7 +39,8 @@ const page = () => {
         <p>Followers: 100</p>
         <div>
         <button>Follow</button>
-        {user?._id == session?.user?.id ? null :<button ><Link style={{textDecoration:'none',color:'white'}} href={`/chat/${user?._id}/${session?.user?.id}`}>Chat</Link></button>}
+        
+        {session && user?._id == session?.user?.id ? null :<button ><Link style={{textDecoration:'none',color:'white'}} href={`/chat/${user?._id}/${session?.user?.id}`}>Chat</Link></button>}
         </div>
       </div>}
     </div>
