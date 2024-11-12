@@ -11,9 +11,13 @@ import { useParams } from 'next/navigation'
 import { useSession } from "next-auth/react";
 import { formatDistance } from "date-fns";
 import logo from '@/app/assets/profileLogo.png'
-
+import { useRouter } from "next/router";
 const page = () => {
-  const {data:session} =useSession()
+  const { data: session } = useSession();
+  const router = useRouter()
+  if(!session){
+    router.push('/login')
+  }
   const messagesEndRef = useRef(null)
   const params = useParams()
   const [chats, setChats]= useState([])
