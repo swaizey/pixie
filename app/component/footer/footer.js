@@ -16,7 +16,7 @@ const Footer = () => {
   useEffect(()=>{
     if(session){
       const getUser = async ()=>{
-        const res = await fetch(`http://localhost:3000/api/users/${session?.user?.id}`)
+        const res = await fetch(`https://mypixie.netlify.app/api/users/${session?.user?.id}`)
         if(res.ok){
           const data = await res.json()
           setUser(data)

@@ -12,7 +12,7 @@ const Reactions = ({opened, setOpened}) => {
     const [post,setPost] = useState('')
     useEffect(()=>{
         const fetchPost = async()=>{
-            const res = await fetch('http://localhost:3000/api/reaction')
+            const res = await fetch('https://mypixie.netlify.app/api/reaction')
             if(res.ok){
                 const data = await res.json()
                 setMsg(data)
@@ -29,7 +29,7 @@ const Reactions = ({opened, setOpened}) => {
         }
         if(!post) return alert('Make a comment')
 
-            const res = await fetch('http://localhost:3000/api/reaction',{
+            const res = await fetch('https://mypixie.netlify.app/api/reaction',{
             method:'POST',
             body:JSON.stringify({
                 post:post,

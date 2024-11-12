@@ -40,7 +40,7 @@ const page = () => {
     if (session) {
       const getChats = async () => {
         const res = await fetch(
-          `http://localhost:3000/api/chat?id=${session?.user.id}`
+          `https://mypixie.netlify.app/api/chat?id=${session?.user.id}`
         );
         const data = await res.json();
         if (res.ok) {

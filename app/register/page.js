@@ -55,7 +55,7 @@ const page = () => {
             alert('gender is required,please select a gender')
             return
         }
-        const res = await fetch('http://localhost:3000/api/users',{
+        const res = await fetch('https://mypixie.netlify.app/api/users',{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({

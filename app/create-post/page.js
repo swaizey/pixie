@@ -47,7 +47,7 @@ const page = () => {
   useEffect(() => {
     if (!screenshot) return;
     const upload = async () => {
-      const res = await fetch("http://localhost:3000/api/cloud", {
+      const res = await fetch("https://mypixie.netlify.app/api/cloud", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
@@ -97,7 +97,7 @@ const page = () => {
   const handleSubmit= async(e)=>{
     e.preventDefault()
 
-    const res = await fetch('http://localhost:3000/api/posts',
+    const res = await fetch('https://mypixie.netlify.app/api/posts',
      { method:'POST',
         body:JSON.stringify({
           post:post,

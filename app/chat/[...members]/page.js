@@ -26,7 +26,7 @@ const page = () => {
   
   useEffect(() => {
     const getChat = async()=>{
-      const res = await fetch(`http://localhost:3000/api/chat/${params?.members[0]}/${params?.members[1]}`)
+      const res = await fetch(`https://mypixie.netlify.app/api/chat/${params?.members[0]}/${params?.members[1]}`)
       const data = await res.json()
       
       if(res.ok){
@@ -40,7 +40,7 @@ const page = () => {
     useEffect(()=>{
       const getUser = async()=>{
         if(otherId){
-          const other = await fetch(`http://localhost:3000/api/users/${otherId}`)
+          const other = await fetch(`https://mypixie.netlify.app/api/users/${otherId}`)
           const data2 = await other.json()
         if(other.ok){
           setOtherUser(data2)
