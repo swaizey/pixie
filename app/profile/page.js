@@ -12,9 +12,15 @@ import { CiBookmarkCheck } from "react-icons/ci";
 import { RiHeartAdd2Line } from "react-icons/ri";
 import Link from "next/link";
 import Images from '@/app/component/Images/Images'
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 const page = () => {
+  const {data:session} = useSession()
   const {user,setUser} = useContext(UserContext)
-
+  const router = useRouter()
+  if(!session){
+    router.push('/login')
+  }
   return (
     <div className={Styles.profileContainer}>
       <div className={Styles.info}>

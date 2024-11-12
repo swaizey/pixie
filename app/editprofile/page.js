@@ -3,9 +3,17 @@ import { UserContext } from "@/app/UserContext";
 import { useContext,useEffect,useState } from "react";
 import Styles from '@/app/editprofile/edit.module.css'
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 const page = () => {
     const router = useRouter()
     const {user,setUser} = useContext(UserContext)
+    const {data:session} = useSession()
+   
+  
+    if(!session){
+      router.push('/login')
+    }
+
     const [firstname, setFirstname] = useState('')
     const [lastname, setLastname] = useState('')
     const [phone, setPhone] = useState('')
