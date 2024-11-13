@@ -23,9 +23,8 @@
 
 body{
   height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 80px;
   overflow-y: auto;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

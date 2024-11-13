@@ -27,7 +27,7 @@ const Homes = () => {
   console.log(posts)
   useEffect(()=>{
     const getPosts = async()=>{
-      const res = await fetch(`https://mypixie.netlify.app/api/posts?page=${page}`)
+      const res = await fetch(`http://localhost:3000/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
         page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
@@ -40,6 +40,9 @@ const Homes = () => {
     
   },[page])
 
+  const auto =  {autoplay: {
+    delay: 1000,
+  }}
 
   return (
     <div className={Styles.home}>
@@ -48,9 +51,9 @@ const Homes = () => {
         <div>
           {
             <div className={Styles.post}>
-                <Swiper  pagination={true} modules={[Pagination]} className="mySwiper">
+                <Swiper   pagination={true} modules={[Pagination]} className="mySwiper">
                   {post?.img.map(img=>(
-                    <SwiperSlide className={Styles.swiper} >{ img == undefined ? <Image src={logo} width={100} height={100} alt="100" /> :<Image src={img == null?logo:img} width={100} height={100} alt="100" />}</SwiperSlide>
+                    <SwiperSlide autoplay={auto}className={Styles.swiper} >{ img == undefined ? <Image src={logo} width={100} height={100} alt="100" /> :<Image src={img == null?logo:img} width={100} height={100} alt="100" />}</SwiperSlide>
                   ))}
                 </Swiper>
 

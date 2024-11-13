@@ -131,9 +131,9 @@ const page = () => {
       )}
 
       {!src && (
-        <div className={Styles.btN}>
+ 
           <button className={Styles.btn} onClick={getImg}></button>
-        </div>
+    
       )}
       {src && (
         <button className={Styles.re}>
