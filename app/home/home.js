@@ -27,7 +27,7 @@ const Homes = () => {
   console.log(posts)
   useEffect(()=>{
     const getPosts = async()=>{
-      const res = await fetch(`http://localhost:3000/api/posts?page=${page}`)
+      const res = await fetch(`https://mypixie.netlify.app/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
         page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
