@@ -11,7 +11,7 @@ import { useParams } from 'next/navigation'
 import { useSession } from "next-auth/react";
 import { formatDistance } from "date-fns";
 import logo from '@/app/assets/profileLogo.png'
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 const page = () => {
   const { data: session } = useSession();
   const router = useRouter()
@@ -30,7 +30,7 @@ const page = () => {
   
   useEffect(() => {
     const getChat = async()=>{
-      const res = await fetch(`https://mypixie.netlify.app/api/chat/${params?.members[0]}/${params?.members[1]}`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/chat/${params?.members[0]}/${params?.members[1]}`)
       const data = await res.json()
       
       if(res.ok){
@@ -44,7 +44,7 @@ const page = () => {
     useEffect(()=>{
       const getUser = async()=>{
         if(otherId){
-          const other = await fetch(`https://mypixie.netlify.app/api/users/${otherId}`)
+          const other = await fetch(`${process.env.NEXT_PUBLIC_API}/api/users/${otherId}`)
           const data2 = await other.json()
         if(other.ok){
           setOtherUser(data2)

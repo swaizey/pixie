@@ -12,7 +12,7 @@ const search = ({opened, setOpened}) => {
     const [name, setName] = useState('')
     useEffect(()=>{
         const getUsers =async()=>{
-            const res = await fetch(`https://mypixie.netlify.app/api/search?name=${name}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/search?name=${name}`)
             if (res.ok){
                 const data = await res.json()
                 setUsers(data)

@@ -27,9 +27,9 @@ import { useRouter } from "next/navigation";
 const page = () => {
   const { data: session } = useSession();
   const router = useRouter()
-  if(!session){
-    router.push('/login')
-  }
+  // if(!session){
+  //   router.push('/login')
+  // }
 
   const [status, setStatus] = useState([
     { username: "Sly", pic: logo1 },
@@ -44,7 +44,7 @@ const page = () => {
     if (session) {
       const getChats = async () => {
         const res = await fetch(
-          `https://mypixie.netlify.app/api/chat?id=${session?.user.id}`
+          `${process.env.NEXT_PUBLIC_API}/api/chat?id=${session?.user.id}`
         );
         const data = await res.json();
         if (res.ok) {
@@ -57,7 +57,7 @@ const page = () => {
   }, [session]);
 
   return (
-    <>
+    <div style={{display:"grid", gridTemplateRows:"100px auto"}}>
       <Swiper
         slidesPerView={4}
         spaceBetween={10}
@@ -69,7 +69,7 @@ const page = () => {
         className="mySwiper"
       >
         {status?.map((st, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide  key={i}>
             <div>
               <div className="statusRing">
                 <Image src={st.pic} alt="pic" width={100} height={100} />
@@ -91,7 +91,6 @@ const page = () => {
                 className={Styles.msg}
                 key={msg?._id}
               >
-                {console.log(msg?.chat.map((c) => c).slice(0 - 1)[0].createdAt)}
 
                 <Image
                   src={msg?.userInfo?.filter((id) => id._id !== session?.user?.id)[0]?.profilePic == undefined ? logo :msg?.userInfo?.filter((id) => id._id !== session?.user?.id)[0]?.profilePic}
@@ -119,7 +118,7 @@ const page = () => {
             </>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
