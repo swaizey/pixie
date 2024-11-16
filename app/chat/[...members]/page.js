@@ -39,7 +39,7 @@ const page = () => {
     }
     getChat()
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
-}, [JSON.stringify(chats), sent])
+}, [sent])
 
     useEffect(()=>{
       const getUser = async()=>{

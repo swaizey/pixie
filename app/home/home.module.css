@@ -1,12 +1,13 @@
 .home{
     overflow-y: auto;
- 
+    
 }
 .post{
     position: relative;
 }
 .post img{
     width: 100%;
+    height: 600px;
 }
 .icon{
     position: absolute;
@@ -22,11 +23,7 @@
 .swiper{
     height: 80%;
 }
-.swiper img{
-    width: 100%;
-    height: 500px;
 
-}
 .icon button{
     outline: none;
     border: none;
