@@ -27,19 +27,21 @@ const page = () => {
   if(session){
     otherId = (params?.members?.filter(other => other !== session?.user?.id)[0])
   }
-  console.log(chats)
+ 
+
   useEffect(() => {
     const getChat = async()=>{
-      const res = await fetch(`/api/chats?id=${params?.members[0]}${params?.members[1]}`,{mode:'no-cors'})
-      const data = await res.json()
+      const res = await fetch(`/api/chats?id=${params?.members[0]}${params?.members[1]}`)
       
       if(res.ok){
+      const data = await res.json()
         setChats(data)
       }
     }
     getChat()
+   
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
-}, [JSON.stringify(chats), sent])
+}, [JSON.stringify(chats),sent])
 
     useEffect(()=>{
       const getUser = async()=>{
