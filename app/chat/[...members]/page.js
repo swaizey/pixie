@@ -15,9 +15,9 @@ import logo from '@/app/assets/profileLogo.png'
 const page = () => {
   const { data: session } = useSession();
   const router = useRouter()
-  // if(!session){
-  //   router.push('/login')
-  // }
+  if(!session){
+    router.push('/login')
+  }
   const messagesEndRef = useRef(null)
   const params = useParams()
   const [chats, setChats]= useState([])
