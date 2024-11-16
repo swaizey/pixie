@@ -22,7 +22,7 @@
 }
 
 body{
-  height: 100vh;
+  height: 95vh;
   display: grid;
   grid-template-rows: auto 80px;
   overflow-y: auto;
