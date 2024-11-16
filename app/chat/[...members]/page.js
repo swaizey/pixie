@@ -27,7 +27,7 @@ const page = () => {
   if(session){
     otherId = (params?.members?.filter(other => other !== session?.user?.id)[0])
   }
-  console.log(chats, params[0]?.members)
+  console.log(chats, params?.members)
    const getChat = async()=>{
       const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)
       
