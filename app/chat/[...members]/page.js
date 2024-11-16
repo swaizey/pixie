@@ -29,7 +29,7 @@ const page = () => {
   }
   console.log(chats, params?.members)
    const getChat = async()=>{
-      const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)
+      const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`,{mode:'no-cors'})
       
       if(res.ok){
       const data = await res.json()
