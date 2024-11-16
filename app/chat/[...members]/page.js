@@ -44,7 +44,7 @@ const page = () => {
     useEffect(()=>{
       const getUser = async()=>{
         if(otherId){
-          const other = await fetch(`${process.env.NEXT_PUBLIC_API}/api/users/${otherId}`)
+          const other = await fetch(`/api/users/${otherId}`)
           const data2 = await other.json()
         if(other.ok){
           setOtherUser(data2)
