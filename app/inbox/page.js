@@ -44,7 +44,7 @@ const page = () => {
     if (session) {
       const getChats = async () => {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API}/api/chat?id=${session?.user.id}`
+          `/api/chat?id=${session?.user.id}`
         );
         const data = await res.json();
         if (res.ok) {

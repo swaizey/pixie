@@ -10,9 +10,10 @@ const Reactions = ({opened, setOpened}) => {
     const [msg,setMsg] = useState([])
     const [newPost,setNewPost] = useState([])
     const [post,setPost] = useState('')
+    const apiUrl = process.env.API
     useEffect(()=>{
         const fetchPost = async()=>{
-            const res = await fetch('https://mypixie.netlify.app/api/reaction')
+            const res = await fetch(`${apiUrl}/api/reaction`)
             if(res.ok){
                 const data = await res.json()
                 setMsg(data)

@@ -51,7 +51,7 @@ const page = () => {
           return alert('Please select an image')
         }
         setLoading(true)
-        const res = await fetch("https://mypixie.netlify.app/api/cloud", {
+        const res = await fetch("/api/cloud", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify({
@@ -60,7 +60,7 @@ const page = () => {
           const data1 = await res.json()
             if(res.ok){
             setDataUrl(data1) 
-            const res2 = await fetch(`https://mypixie.netlify.app/api/users/${user?._id}`, {
+            const res2 = await fetch(`/api/users/${user?._id}`, {
                 method: "PUT",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({

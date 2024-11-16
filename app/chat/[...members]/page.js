@@ -30,7 +30,7 @@ const page = () => {
   
   useEffect(() => {
     const getChat = async()=>{
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/chat/${params?.members[0]}/${params?.members[1]}`)
+      const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)
       const data = await res.json()
       
       if(res.ok){

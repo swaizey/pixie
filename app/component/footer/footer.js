@@ -16,7 +16,7 @@ const Footer = () => {
   useEffect(()=>{
     if(session){
       const getUser = async ()=>{
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/users/${session?.user?.id}`)
+        const res = await fetch(`/api/users/${session?.user?.id}`)
         if(res.ok){
           const data = await res.json()
           setUser(data)

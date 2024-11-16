@@ -34,7 +34,7 @@ const page = () => {
     const editProile =async (e)=>{
       setLoading(true)
       e.preventDefault()
-      const res = await fetch('https://mypixie.netlify.app/api/editprofile',{
+      const res = await fetch('/api/editprofile',{
         method:"PUT",
         body:JSON.stringify({
           firstname:firstname,

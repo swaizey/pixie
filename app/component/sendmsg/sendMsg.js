@@ -13,7 +13,7 @@ const SendMsg = ({otherId,setSent,sent}) => {
     if(otherId == null || !session || msg=='') {
       return
     }else{
-    const res = await fetch('https://mypixie.netlify.app/api/chat',{
+    const res = await fetch('/api/chat',{
       method:"POST",
       body:JSON.stringify({
         members:[session?.user?.id, otherId],

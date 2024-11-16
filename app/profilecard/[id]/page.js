@@ -15,7 +15,7 @@ const page = () => {
   useEffect(()=>{
     const getUserInfo = async()=>{
       if(id){
-        const res = await fetch(`https://mypixie.netlify.app/api/users/${id}`)
+        const res = await fetch(`/api/users/${id}`)
         const data = await res.json()
         if(res.ok){
           setUser(data)
