@@ -30,7 +30,7 @@ const page = () => {
   console.log(chats)
   useEffect(() => {
     const getChat = async()=>{
-      const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)
+      const res = await fetch(`/api/chats?id=${params?.members[0]}${params?.members[1]}`,{mode:'no-cors'})
       const data = await res.json()
       
       if(res.ok){
@@ -39,7 +39,7 @@ const page = () => {
     }
     getChat()
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
-}, [sent])
+}, [JSON.stringify(chats), sent])
 
     useEffect(()=>{
       const getUser = async()=>{
