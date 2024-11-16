@@ -16,15 +16,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+
 import Link from "next/link";
 const Homes = () => {
-
+  
   const [page, setPage] = useState(0)
   const [posts, setPosts] =useState([])
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
   
-  console.log(posts)
+  
   useEffect(()=>{
     const getPosts = async()=>{
       const res = await fetch(`/api/posts?page=${page}`)

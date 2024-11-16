@@ -7,17 +7,17 @@ import { CiFlag1 } from "react-icons/ci";
 import Styles from '@/app/chat/[...members]/chat.module.css'
 import Image from "next/image";
 import SendMsg from "../../component/sendmsg/sendMsg";
-import { useParams } from 'next/navigation'
+import { useParams,useRouter } from 'next/navigation'
 import { useSession } from "next-auth/react";
 import { formatDistance } from "date-fns";
 import logo from '@/app/assets/profileLogo.png'
-import { useRouter } from "next/navigation";
+
 const page = () => {
   const { data: session } = useSession();
   const router = useRouter()
-  if(!session){
-    router.push('/login')
-  }
+  // if(!session){
+  //   router.push('/login')
+  // }
   const messagesEndRef = useRef(null)
   const params = useParams()
   const [chats, setChats]= useState([])
@@ -27,7 +27,7 @@ const page = () => {
   if(session){
     otherId = (params?.members?.filter(other => other !== session?.user?.id)[0])
   }
-  
+  console.log(chats)
   useEffect(() => {
     const getChat = async()=>{
       const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)

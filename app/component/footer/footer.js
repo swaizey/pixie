@@ -9,7 +9,9 @@ import Link from "next/link";
 import { UserContext } from "@/app/UserContext";
 import { useContext,useEffect } from "react";
 import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 const Footer = () => {
+  const pathame = usePathname()
   const {data:session}= useSession()
   const {user,setUser} = useContext(UserContext)
 
@@ -27,22 +29,24 @@ const Footer = () => {
   },[session])
   return (
     <div className={Style.footer}>
-      <Link href={'/'}>
+
+      <Link className={pathame == '/' ? Style.bg : null} href={'/'}>
       <FiHome />
       <p>Home</p>
       </Link>
-      <Link href={'/friends'}>
+
+      <Link className={pathame == '/friends' ? Style.bg : null} href={'/friends'}>
       <LuUsers2 />
       <p>Friends</p>
       </Link>
-      <Link href={'/create-post'}>
+      <Link className={pathame == '/create-post' ? Style.bg : null} href={'/create-post'}>
       <CiCirclePlus />
       </Link>
-      <Link href={'/inbox'}>
+      <Link className={pathame == '/inbox' ? Style.bg : null} href={'/inbox'}>
       <BiMessageAltDetail />
       <p>Inbox</p>
       </Link>
-      <Link href={'/profile'}>
+      <Link className={pathame == '/profile' ? Style.bg : null} href={'/profile'}>
       <FiUser />
       <p>Profile</p>
       </Link>
