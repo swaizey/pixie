@@ -28,8 +28,7 @@ const page = () => {
     otherId = (params?.members?.filter(other => other !== session?.user?.id)[0])
   }
   console.log(chats)
-  useEffect(() => {
-    const getChat = async()=>{
+   const getChat = async()=>{
       const res = await fetch(`/api/chat/${params?.members[0]}/${params?.members[1]}`)
       
       if(res.ok){
@@ -38,8 +37,10 @@ const page = () => {
       }
     }
     getChat()
-    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
-}, [JSON.stringify(chats),sent])
+//   useEffect(() => {
+   
+//     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
+// }, [JSON.stringify(chats),sent])
 
     useEffect(()=>{
       const getUser = async()=>{
