@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 const SendMsg = ({otherId,setSent,sent}) => {
   const {data:session} = useSession()
   const [msg, setMsg]= useState('')
-
+  console.log(otherId, session,msg)
   const sendMsg = async(e)=>{
     e.preventDefault()
     if(otherId == null || !session || msg=='') {
@@ -15,6 +15,7 @@ const SendMsg = ({otherId,setSent,sent}) => {
     }else{
     const res = await fetch('/api/chat',{
       method:"POST",
+      headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
         username:session?.user?.username,
