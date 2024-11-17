@@ -30,13 +30,14 @@ const SendMsg = ({otherId,setSent,sent}) => {
   }}
   return (
     <div className={Styles.sendMdg}>
+        <form onSubmit={sendMsg}>
         <input
         placeholder='text'
         value={msg}
         onChange={(e)=>setMsg(e.target.value)}
         />
-
        <button onClick={sendMsg}><GrSend /></button> 
+          </form>
     </div>
   )
 }
