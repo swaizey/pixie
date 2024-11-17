@@ -13,20 +13,21 @@ const SendMsg = ({otherId,setSent,sent}) => {
     if(otherId == null || !session || msg=='') {
       return
     }else{
-    const res = await fetch('/api/chat',{
+       fetch('/api/chat',{
       method:"POST",
-      headers:{"Content-Type":"application/json"},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
         username:session?.user?.username,
         message:msg,
         senderId:session?.user?.id
       })
-    })
-    if(res.ok){
+    }).then((response) => response.json())
+    .then((json) => console.log(json))
+
       setSent(!sent)
       setMsg('')
-    }
+   
   }}
   return (
     <div className={Styles.sendMdg}>
