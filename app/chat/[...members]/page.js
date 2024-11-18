@@ -32,12 +32,11 @@ const page = () => {
   }
 
     
-  const sendMsg = (e)=>{
+  const sendMsg =async (e)=>{
     e.preventDefault()
-
+  console.log('about to send')
        fetch('/api/chat',{
       method:"POST",
-      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
         username:session?.user?.username,
@@ -46,7 +45,7 @@ const page = () => {
       })
     }).then((response) => response.json())
     .then((json) => console.log(json))
-
+   console.log('sent...')
       setSent(!sent)
       setMsg('')
    
@@ -121,7 +120,7 @@ const page = () => {
         value={msg}
         onChange={(e)=>setMsg(e.target.value)}
         />
-       <button onClick={sendMsg}><GrSend /></button> 
+       <button><GrSend /></button> 
           </form>
     </div>
     </div>
