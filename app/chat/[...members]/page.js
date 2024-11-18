@@ -34,9 +34,7 @@ const page = () => {
     
   const sendMsg = (e)=>{
     e.preventDefault()
-    if(otherId == null || !session || msg=='') {
-      return
-    }else{
+
        fetch('/api/chat',{
       method:"POST",
       headers:{'Content-Type':'application/json'},
