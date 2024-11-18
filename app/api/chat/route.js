@@ -28,7 +28,7 @@ export async function POST(request){
             return NextResponse.json(newChat)
         }
     } catch (error) {
-        return NextResponse.json({error:error},{status:500})
+        return NextResponse.json({msg:error})
 
     }
 
