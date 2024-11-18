@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { CiFlag1 } from "react-icons/ci";
 import Styles from '@/app/chat/[...members]/chat.module.css'
-import Styles from '@/app/component/sendmsg/msg.module.css'
+import Style from '@/app/component/sendmsg/msg.module.css'
 import Image from "next/image";
 import { GrSend } from "react-icons/gr";
 //import SendMsg from "../../component/sendmsg/sendMsg";
@@ -116,7 +116,7 @@ const page = () => {
         </div>
       </div>
     </div>
-    <div className={Styles.sendMdg}>
+    <div className={Style.sendMdg}>
         <form onSubmit={sendMsg}>
         <input
         placeholder='text'
