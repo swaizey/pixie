@@ -50,7 +50,7 @@ const page = () => {
       setSent(!sent)
       setMsg('')
    
-  }}
+  }
 
 
   useEffect(() => {
