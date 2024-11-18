@@ -5,8 +5,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { CiFlag1 } from "react-icons/ci";
 import Styles from '@/app/chat/[...members]/chat.module.css'
+import Styles from '@/app/component/sendmsg/msg.module.css'
 import Image from "next/image";
-import SendMsg from "../../component/sendmsg/sendMsg";
+//import SendMsg from "../../component/sendmsg/sendMsg";
 import { useParams,useRouter } from 'next/navigation'
 import { useSession } from "next-auth/react";
 import { formatDistance } from "date-fns";
@@ -18,6 +19,7 @@ const page = () => {
   // if(!session){
   //   router.push('/login')
   // }
+  const [msg, setMsg]= useState('')
   const messagesEndRef = useRef(null)
   const params = useParams()
   const [chats, setChats]= useState([])
@@ -27,7 +29,30 @@ const page = () => {
   if(session){
     otherId = (params?.members?.filter(other => other !== session?.user?.id)[0])
   }
- 
+
+    
+  const sendMsg = async(e)=>{
+    e.preventDefault()
+    if(otherId == null || !session || msg=='') {
+      return
+    }else{
+       fetch('/api/chat',{
+      method:"POST",
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        members:[session?.user?.id, otherId],
+        username:session?.user?.username,
+        message:msg,
+        senderId:session?.user?.id
+      })
+    }).then((response) => response.json())
+    .then((json) => console.log(json))
+
+      setSent(!sent)
+      setMsg('')
+   
+  }}
+
 
   useEffect(() => {
     const getChat = async()=>{
@@ -90,7 +115,16 @@ const page = () => {
         </div>
       </div>
     </div>
-    <SendMsg otherId={otherId} setSent={setSent} sent={sent} />
+    <div className={Styles.sendMdg}>
+        <form onSubmit={sendMsg}>
+        <input
+        placeholder='text'
+        value={msg}
+        onChange={(e)=>setMsg(e.target.value)}
+        />
+       <button onClick={sendMsg}><GrSend /></button> 
+          </form>
+    </div>
     </div>
   );
 };
