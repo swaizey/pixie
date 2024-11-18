@@ -35,7 +35,8 @@ const page = () => {
   const sendMsg =async (e)=>{
     e.preventDefault()
   console.log('about to send',session?.user?.id, otherId)
-       fetch('/api/chat',{mode:'no-cors'},{
+       const res = await fetch('/api/chat',{
+      headers:{'Content-type':'application/json'},
       method:"POST",
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
@@ -43,11 +44,18 @@ const page = () => {
         message:msg,
         senderId:session?.user?.id
       })
-    }).then((response) => response.json())
-    .then((json) => console.log(json))
-   console.log('sent...')
+    })
+    if(res.ok){
+      const data = await res.json()
       setSent(!sent)
       setMsg('')
+    }else{
+      const data = await res.json()
+      
+      console.log(data)
+    }
+   console.log('sent...')
+      
    
   }
 
@@ -120,7 +128,7 @@ const page = () => {
         value={msg}
         onChange={(e)=>setMsg(e.target.value)}
         />
-       <button><GrSend /></button> 
+       <button onClick={sendMsg}><GrSend /></button> 
           </form>
     </div>
     </div>
