@@ -34,8 +34,8 @@ const page = () => {
     
   const sendMsg =async (e)=>{
     e.preventDefault()
-  console.log('about to send')
-       fetch('/api/chat',{
+  console.log('about to send',session?.user?.id, otherId)
+       fetch('/api/chat',{mode:'no-cors'}{
       method:"POST",
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
