@@ -7,6 +7,7 @@ import { CiFlag1 } from "react-icons/ci";
 import Styles from '@/app/chat/[...members]/chat.module.css'
 import Styles from '@/app/component/sendmsg/msg.module.css'
 import Image from "next/image";
+import { GrSend } from "react-icons/gr";
 //import SendMsg from "../../component/sendmsg/sendMsg";
 import { useParams,useRouter } from 'next/navigation'
 import { useSession } from "next-auth/react";
