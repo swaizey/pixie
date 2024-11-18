@@ -10,13 +10,13 @@ export async function POST(request){
     try {
         const chatExist = await chatSchema.find({$or:[{members:array.reverse()},{members:members.toReversed()}]})
         if(chatExist.length !== 0){
-            await chatExist[0].chat.push(
+            await chatExist[0]?.chat?.push(
                 {username:username,
                     message:message,
                     senderId:senderId}
                 )
-                await chatExist[0].save()
-                return NextResponse.json(chatExist[0].chat)
+                await chatExist[0]?.save()
+                return NextResponse.json(chatExist[0]?.chat)
     
         }else{
             const newChat = await chatSchema.create({
@@ -28,7 +28,7 @@ export async function POST(request){
             return NextResponse.json(newChat)
         }
     } catch (error) {
-        return NextResponse.json({msg:error})
+        return NextResponse.json(error)
 
     }
 
