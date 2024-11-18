@@ -32,7 +32,7 @@ const page = () => {
   }
 
     
-  const sendMsg = async(e)=>{
+  const sendMsg = (e)=>{
     e.preventDefault()
     if(otherId == null || !session || msg=='') {
       return
