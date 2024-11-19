@@ -6,7 +6,7 @@ export async function POST(request){
     const {members,username,message,senderId} = await request.json()
     await connectMongoDB()
     
-     const array = members.toReversed();
+     const array = members;
     try {
         const chatExist = await chatSchema.find({$or:[{members:array},{members:members}]});
             if(chatExist.length !== 0){
