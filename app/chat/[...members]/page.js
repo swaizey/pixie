@@ -36,7 +36,7 @@ const page = () => {
     e.preventDefault()
   console.log('about to send',session?.user?.id, otherId,session?.user?.username,msg)
     try{
-       const res = await fetch('/api/chat',{
+       const res = await fetch('https://mypixie.netlify.app/api/chat',{
       method:"POST",
       headers:{'Content-type':'application/json'},
       body:JSON.stringify({
