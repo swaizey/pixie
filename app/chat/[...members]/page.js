@@ -35,6 +35,7 @@ const page = () => {
   const sendMsg =async (e)=>{
     e.preventDefault()
   console.log('about to send',session?.user?.id, otherId,session?.user?.username,msg)
+    try{
        const res = await fetch('/api/chat',{
       method:"POST",
       headers:{'Content-type':'application/json'},
@@ -49,10 +50,9 @@ const page = () => {
       const data = await res.json()
       setSent(!sent)
       setMsg('')
-    }else{
-      const data = await res.json()
-      
-      console.log(data)
+    }}
+    catch(error){
+      console.log(error)
     }
    console.log('sent...')
       
