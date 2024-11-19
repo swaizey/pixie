@@ -34,10 +34,10 @@ const page = () => {
     
   const sendMsg =async (e)=>{
     e.preventDefault()
-  console.log('about to send',session?.user?.id, otherId)
+  console.log('about to send',session?.user?.id, otherId,session?.user?.username,msg)
        const res = await fetch('/api/chat',{
-      headers:{'Content-type':'application/json'},
       method:"POST",
+      headers:{'Content-type':'application/json'},
       body:JSON.stringify({
         members:[session?.user?.id, otherId],
         username:session?.user?.username,
