@@ -8,7 +8,8 @@ export async function POST(request){
     
      const array = members.toReversed();
     try {
-        const chatExist = await chatSchema.find({$or:[{members:array},{members:members}]})        if(chatExist.length !== 0){
+        const chatExist = await chatSchema.find({$or:[{members:array},{members:members}]});
+            if(chatExist.length !== 0){
             await chatExist[0]?.chat?.push(
                 {username:username,
                     message:message,
