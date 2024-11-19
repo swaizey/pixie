@@ -5,10 +5,10 @@ import mongoose from 'mongoose'
 export async function POST(request){
     const {members,username,message,senderId} = await request.json()
     await connectMongoDB()
-    
-     const array = members;
+    const members1 = [members[0],members[1]]
+    const members2 = [members[1],members[0]]
     try {
-        const chatExist = await chatSchema.find({$or:[{members:array},{members:members}]});
+        const chatExist = await chatSchema.find({$or:[{members:members1},{members:members2}]});
             if(chatExist.length !== 0){
             await chatExist[0]?.chat?.push(
                 {username:username,
