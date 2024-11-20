@@ -8,7 +8,13 @@ const postSchema = new Schema({
     like:[],
     dislikes:[],
     videoUrl:[],
-    reaction:[],
+    reaction:[{
+        type:new mongoose.Schema({
+        post:String,
+        posterId:String,
+        posterUsername:String
+        },{timestamps:true})
+    }]
     posterId:{type:mongoose.Schema.Types.ObjectId, ref:'Users'}
 }, {timestamps:true})
 
