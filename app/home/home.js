@@ -49,8 +49,8 @@ const Homes = () => {
     <div className={Styles.home}>
       {posts && posts?.map((post) => (
         <div>
-          {
           {opened && <Reactions opened={opened} postId={post._id} setOpened={setOpened}/>}
+          {
             <div className={Styles.post}>
                 <Swiper   pagination={true} modules={[Pagination]} className="mySwiper">
                   {post?.img.map(img=>(
