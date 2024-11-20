@@ -9,11 +9,11 @@ const postSchema = new Schema({
     dislikes:[],
     videoUrl:[],
     reaction:[
-      [
+        {
         post:{type:String},
         posterId{type:mongoose.Schema.Types.ObjectId, ref:'Users'},
         posterUsername{type:String}
-        ]
+          }
     ],
     posterId:{type:mongoose.Schema.Types.ObjectId, ref:'Users'}
 }, {timestamps:true})
