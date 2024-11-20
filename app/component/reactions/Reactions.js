@@ -15,7 +15,7 @@ const Reactions = ({opened, setOpened, postId}) => {
     console.log(apiUrl,post, newPost,msg)
     useEffect(()=>{
         const fetchPost = async()=>{
-            const res = await fetch(`/api/reaction/${postId}`)
+            const res = await fetch(`/api/reaction?id=${postId}`)
             if(res.ok){
                 const data = await res.json()
                 setMsg(data)
@@ -55,7 +55,7 @@ const Reactions = ({opened, setOpened, postId}) => {
         <button onClick={()=>setOpened(false)} className={Style.btn}>x</button>
         <div style={{display:'grid', gridTemplateRows:'auto 40px', height:'90%'}}>
         <div style={{overflowY:'auto'}}>
-        {msg?.map(m=>(
+        {msg?.length == 0 ? (<p>No post...</p>) : msg?.map(m=>(
                <div key={m?._id} className={Style.msgs}>
                {msg&&<p>@{m.posterUsername}</p>}
                <p>{m.post}</p>
