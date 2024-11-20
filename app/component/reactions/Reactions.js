@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { formatDistance } from 'date-fns'
 
-const Reactions = ({opened, setOpened}) => {
+const Reactions = ({opened, setOpened, postId}) => {
     const router = useRouter()
     const {data:session} = useSession()
     const [msg,setMsg] = useState([])
@@ -35,6 +35,7 @@ const Reactions = ({opened, setOpened}) => {
             const res = await fetch('https://mypixie.netlify.app/api/reaction',{
             method:'POST',
             body:JSON.stringify({
+                postId,
                 post:post,
                 posterUsername:session?.user?.username,
                 posterId:session?.user?.id
