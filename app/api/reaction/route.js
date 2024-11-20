@@ -7,12 +7,15 @@ import { NextResponse } from "next/server";
 export async function GET(request) {
 
  
+  const url = new URL(request.url)
+
+  const id = url.searchParams.get("id")
   
     await connectMongoDB();
     try{
-      const react = await Reaction.find().sort({createdAt:-1})
+      const react = await Post.findById({_id:id).sort({createdAt:-1})
   
-      return NextResponse.json(react);
+      return NextResponse.json(react?.reaction);
     }catch(error){
       return NextResponse.json({msg:"Something went wrong"},{status:500})
     }
