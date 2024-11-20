@@ -1,5 +1,6 @@
 import connectMongoDB from "@/app/connectDB";
 import Reaction from "@/app/models/msgSchema";
+import Post from "@/app/models/postSchema";
 import { NextResponse } from "next/server";
 
 
@@ -20,13 +21,18 @@ export async function GET(request) {
   
 
 export async function POST(request) {
-  const { post, posterId, posterUsername} =
+  const { post, posterId, posterUsername, postId} =
     await request.json();
 
   await connectMongoDB();
-        const react = await Reaction.create({
+  const react = await Post.findById({_id:postId})
+ if(react){
+         await react?.reaction?.push({
             post, posterId, posterUsername
-      });
-
-      return NextResponse.json(react);
+      })
+        await react?.reaction?.save()
+  return NextResponse.json(react);
+ }else{
+      return NextResponse.json('Not found')
+ }
     }
