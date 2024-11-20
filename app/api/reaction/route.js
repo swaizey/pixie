@@ -13,7 +13,7 @@ export async function GET(request) {
   
     await connectMongoDB();
     try{
-      const react = await Post.findById({_id:id).sort({createdAt:-1})
+      const react = await Post.findById({_id:id}).sort({createdAt:-1})
   
       return NextResponse.json(react?.reaction);
     }catch(error){
