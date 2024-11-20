@@ -10,7 +10,7 @@ export async function GET(request) {
   const url = new URL(request.url)
 
   const id = url.searchParams.get("id")
-  
+   return NextResponse.json(id)
     await connectMongoDB();
     try{
       const react = await Post.findById({_id:id}).sort({createdAt:-1})
