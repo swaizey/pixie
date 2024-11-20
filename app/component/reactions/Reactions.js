@@ -15,7 +15,7 @@ const Reactions = ({opened, setOpened}) => {
     console.log(apiUrl,post, newPost,msg)
     useEffect(()=>{
         const fetchPost = async()=>{
-            const res = await fetch(`${apiUrl}/api/reaction`)
+            const res = await fetch(`/api/reaction`)
             if(res.ok){
                 const data = await res.json()
                 setMsg(data)
