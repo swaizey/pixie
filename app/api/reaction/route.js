@@ -17,9 +17,9 @@ export async function GET(request) {
     try{
       const react = await Post.findById({_id:id}).sort({createdAt:-1})
   
-      return NextResponse.json(react[0]?.reaction);
+      return NextResponse.json(react[0]?.reaction,{id:id});
     }catch(error){
-      return NextResponse.json({msg:"Something went wrong"},{status:500})
+      return NextResponse.json({msg:"Something went wrong"},{id:id},{status:500})
     }
   
   }
