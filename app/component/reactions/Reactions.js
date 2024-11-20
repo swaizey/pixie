@@ -1,3 +1,4 @@
+'use client'
 import {useState,useEffect} from 'react'
 import Style from '@/app/component/reactions/reactions.module.css'
 import { useSession } from 'next-auth/react'
