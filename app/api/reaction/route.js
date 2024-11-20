@@ -29,7 +29,9 @@ export async function POST(request) {
 
   await connectMongoDB();
   const react = await Post.findById({_id:postId})
+ return NextResponse.json(react)
  if(react){
+    
          await react?.reaction?.push({
             post, posterId, posterUsername
       })
