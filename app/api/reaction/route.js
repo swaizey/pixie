@@ -33,7 +33,7 @@ export async function POST(request) {
  if(react){
     
          await react?.reaction?.push({
-            post, posterId, posterUsername
+            post:post, posterId:posterId, posterUsername:posterUsername
       })
         await react?.reaction?.save()
   return NextResponse.json(react);
