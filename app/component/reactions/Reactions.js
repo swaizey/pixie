@@ -43,6 +43,7 @@ const Reactions = ({opened, setOpened}) => {
             if(res.ok){
                 const data = await res.json()
                 alert('Message sent...')
+                setPost('')
                 setNewPost(data)
             }
     }
