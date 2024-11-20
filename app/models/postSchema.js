@@ -14,7 +14,7 @@ const postSchema = new Schema({
         posterId:String,
         posterUsername:String
         },{timestamps:true})
-    }]
+    }],
     posterId:{type:mongoose.Schema.Types.ObjectId, ref:'Users'}
 }, {timestamps:true})
 
