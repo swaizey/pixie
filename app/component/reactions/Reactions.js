@@ -55,7 +55,7 @@ const Reactions = ({opened, setOpened, postId}) => {
         <button onClick={()=>setOpened(false)} className={Style.btn}>x</button>
         <div style={{display:'grid', gridTemplateRows:'auto 40px', height:'90%'}}>
         <div style={{overflowY:'auto'}}>
-        {msg?.length == 0 ? 'No post...' : msg?.map(m=>(
+        {msg?.reaction?.map(m=>(
                <div key={m?._id} className={Style.msgs}>
                {msg&&<p>@{m.posterUsername}</p>}
                <p>{m.post}</p>
