@@ -32,7 +32,7 @@ export async function POST(request) {
 
  if(react){
     await react?.reaction?.push({post:post, posterId:posterId, posterUsername:posterUsername})
-    await react[0]?.save()
+    await react?.reaction?.save()
     return NextResponse.json(react);
  }else{
       return NextResponse.json('Not found')
