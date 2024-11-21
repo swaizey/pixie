@@ -24,6 +24,7 @@ const Homes = () => {
   const [posts, setPosts] =useState([])
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
+  const [postId, setPostId] =useState('')
  
   
   
@@ -45,12 +46,12 @@ const Homes = () => {
   const auto =  {autoplay: {
     delay: 1000,
   }}
-
+  console.log(postId)
   return (
     <div className={Styles.home}>
       {posts && posts?.map((post) => (
         <div>
-          {opened && <Reactions opened={opened} postId={post._id} setOpened={setOpened}/>}
+          {opened && <Reactions opened={opened} postId={postId} setPostId={setPostId} setOpened={setOpened}/>}
           {
             <div className={Styles.post}>
                 <Swiper   pagination={true} modules={[Pagination]} className="mySwiper">
@@ -65,7 +66,7 @@ const Homes = () => {
                 <p>233</p>
                 </>
                 <>
-                <button onClick={()=>setOpened(true)}><MdMessage border/></button>
+                <button onClick={()=>(setOpened(true),setPostId(post._id))}><MdMessage border/></button>
                 <p>{'100'}</p>
                 </>
                 <>
