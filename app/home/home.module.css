@@ -8,7 +8,7 @@
 .post img{
     width: 100%;
     min-height: 500px;
-    object-fit:cover;
+    object-fit:contain;
 }
 .icon{
     position: absolute;
