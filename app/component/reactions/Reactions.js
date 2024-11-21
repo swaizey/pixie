@@ -12,7 +12,7 @@ const Reactions = ({opened, setOpened, postId}) => {
     const [newPost,setNewPost] = useState([])
     const [post,setPost] = useState('')
     const apiUrl = process.env.API
-    console.log(apiUrl,post, newPost,msg)
+    console.log('post:',post, 'newpost:',newPost,'all post:',msg)
     useEffect(()=>{
         const fetchPost = async()=>{
             const res = await fetch(`/api/reaction?id=${postId}`)
