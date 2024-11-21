@@ -52,7 +52,7 @@ const Reactions = ({opened, setOpened, postId, setPostId}) => {
   return (
     <div className={`${Style.msgCon} ${opened ? null : Style.closed}`}>
     
-        <button onClick={()=>(setOpened(false), setPostId(null))} className={Style.btn}>x</button>
+        <button onClick={()=>(setOpened(false), postId=null)} className={Style.btn}>x</button>
         <div style={{display:'grid', gridTemplateRows:'auto 40px', height:'90%'}}>
         <div style={{overflowY:'auto'}}>
         {msg?.reaction?.length == 0 ? (<p>No post now</p>) : msg?.reaction?.map(m=>(
