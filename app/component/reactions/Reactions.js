@@ -23,7 +23,7 @@ const Reactions = ({opened, setOpened, postId}) => {
             }
         }
         fetchPost()
-    },[JSON.stringify(newPost)])
+    },[JSON.stringify(newPost), postId])
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
