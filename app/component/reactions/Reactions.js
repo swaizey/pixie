@@ -24,7 +24,7 @@ const Reactions = ({opened, setOpened, postId, setPostId}) => {
         }
         fetchPost()
     },[JSON.stringify(newPost), postId])
-
+    console.log(postId)
     const handleSubmit = async(e)=>{
         e.preventDefault()
         if(!session){
