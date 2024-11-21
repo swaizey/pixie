@@ -14,15 +14,15 @@ const Reactions = ({opened, setOpened, postId, setPostId}) => {
     const apiUrl = process.env.API
     console.log('post:',post, 'newpost:',newPost,'all post:',msg)
     useEffect(()=>{
+        if(postId.length !== 0){
         const fetchPost = async()=>{
             const res = await fetch(`/api/reaction?id=${postId}`)
             if(res.ok){
                 const data = await res.json()
                 setMsg(data)
-            
-            }
-        }
+            }}
         fetchPost()
+        }
     },[JSON.stringify(newPost), postId])
     console.log(postId)
     const handleSubmit = async(e)=>{
