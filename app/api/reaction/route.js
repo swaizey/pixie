@@ -29,14 +29,11 @@ export async function POST(request) {
 
   await connectMongoDB();
   const react = await Post.findById({_id:postId})
- return NextResponse.json(react)
+
  if(react){
-    
-         await react[0]?.reaction?.push({
-            post:post, posterId:posterId, posterUsername:posterUsername
-      })
-        await react[0]?.save()
-  return NextResponse.json(react);
+    await react?.reaction?.push({post:post, posterId:posterId, posterUsername:posterUsername})
+    await react[0]?.save()
+    return NextResponse.json(react);
  }else{
       return NextResponse.json('Not found')
  }
