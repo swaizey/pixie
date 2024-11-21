@@ -10,14 +10,12 @@ export async function GET(request) {
   const url = new URL(request.url)
 
   const id = url.searchParams.get("id")
- if(id){
-   return NextResponse.json(id)
- }
+
     await connectMongoDB();
     try{
       const react = await Post.findById({_id:id}).sort({createdAt:-1})
   
-      return NextResponse.json(react[0]?.reaction,{id:id});
+      return NextResponse.json(react);
     }catch(error){
       return NextResponse.json({msg:"Something went wrong"},{id:id},{status:500})
     }
