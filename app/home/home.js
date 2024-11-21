@@ -55,7 +55,7 @@ const Homes = () => {
           {
             <div className={Styles.post}>
                 <Swiper   pagination={true} modules={[Pagination]} className="mySwiper">
-                  {post?.img.filter((img) => img == null).map((filteredImg) =>(
+                  {post?.img.filter((img), img == null =>(
                     <>
                     <SwiperSlide autoplay={auto}className={Styles.swiper} >
                     <Image src={filteredImg} width={100} height={100} alt="100" />
