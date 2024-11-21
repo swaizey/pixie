@@ -48,14 +48,14 @@ const Reactions = ({opened, setOpened, postId}) => {
                 setNewPost(data)
             }
     }
-    console.log(msg)
+
   return (
     <div className={`${Style.msgCon} ${opened ? null : Style.closed}`}>
     
         <button onClick={()=>setOpened(false)} className={Style.btn}>x</button>
         <div style={{display:'grid', gridTemplateRows:'auto 40px', height:'90%'}}>
         <div style={{overflowY:'auto'}}>
-        {msg?.length == 0 ? (<p>No post...</p>) : msg?.map(m=>(
+        {msg?.length == 0 ? 'No post...' : msg?.map(m=>(
                <div key={m?._id} className={Style.msgs}>
                {msg&&<p>@{m.posterUsername}</p>}
                <p>{m.post}</p>
