@@ -59,7 +59,7 @@ const Homes = () => {
                   {post?.img.map(img=>(
                     <>
                     <SwiperSlide autoplay={auto}className={Styles.swiper} >
-                    <Image src={filteredImg} width={100} height={100} alt="100" />
+                    <Image src={img} width={100} height={100} alt="100" />
                     </SwiperSlide>
                     {console.log(filteredImg)}
                     </>
