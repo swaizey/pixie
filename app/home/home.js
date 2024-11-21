@@ -24,6 +24,7 @@ const Homes = () => {
   const [posts, setPosts] =useState([])
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
+ 
   
   
   useEffect(()=>{
