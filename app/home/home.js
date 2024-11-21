@@ -51,7 +51,7 @@ const Homes = () => {
     <div className={Styles.home}>
       {posts && posts?.map((post) => (
         <div>
-        {console.log(post)}
+        {console.log(post?.img.filter(i =>i == null))}
           {opened && <Reactions opened={opened} postId={postId} setPostId={setPostId} setOpened={setOpened}/>}
           {
             <div className={Styles.post}>
