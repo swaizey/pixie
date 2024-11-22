@@ -26,5 +26,6 @@ body{
   display: grid;
   grid-template-rows: 70vh 100px;
   overflow-y: auto;
+  background:green;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
