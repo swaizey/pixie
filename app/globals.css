@@ -24,7 +24,7 @@
 body{
   height: 100vh;
   display: grid;
-  grid-template-rows: 86.7vh 100px;
+  grid-template-rows: 70vh 100px;
   overflow-y: auto;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
