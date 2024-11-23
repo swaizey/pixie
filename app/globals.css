@@ -24,7 +24,7 @@
 body{
 
   display: grid;
-  grid-template-rows: 85vh 100px;
+  grid-template-rows: 88vh 100px;
   overflow-y: auto;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
