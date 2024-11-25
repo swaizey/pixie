@@ -27,14 +27,14 @@ export default function RootLayout({ children }) {
       </script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className='app'>
         <AuthProvider>
         <UserProvider>
+        <div className='app'>
         {children}
         <Footer />
+        </div>
         </UserProvider>
         </AuthProvider>
-        </div>
       </body>
     </html>
   );
