@@ -28,7 +28,7 @@ body{
 }
 .app{
   display: flex;
-  flex-direction:colum;
+  flex-direction:column;
 }
 .footer1{
   margin-top:auto;
