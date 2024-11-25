@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <UserProvider>
         <div className='app'>
         {children}
-        <Footer />
+        <div className='footer1'><Footer /></div>
         </div>
         </UserProvider>
         </AuthProvider>
