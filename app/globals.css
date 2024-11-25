@@ -22,11 +22,14 @@
 }
 
 body{
+  overflow-y: auto;
   min-heigth:100vh;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .app{
-  display: grid;
-  grid-template-rows: 95vh auto;
-  overflow-y: auto;
+  display: flex;
+  flex-direction:colum;
+}
+.footer1{
+  margin-top:auto;
 }
