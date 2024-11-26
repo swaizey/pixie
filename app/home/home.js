@@ -46,12 +46,12 @@ const Homes = () => {
   const auto =  {autoplay: {
     delay: 1000,
   }}
-  console.log(postId)
+
   return (
     <div className={Styles.home}>
       {posts && posts?.map((post) => (
         <div>
-        {console.log(post?.img.filter(i =>i !== null).map(i => i))}
+      
           {opened && <Reactions opened={opened} postId={postId} setPostId={setPostId} setOpened={setOpened}/>}
           {
             <div className={Styles.post}>
