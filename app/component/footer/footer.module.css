@@ -6,8 +6,9 @@
     padding: 10px 15px;
     border-top:1px solid grey;
     background:red;
-      position: absolute;
+      position: fixed;
       bottom: 0;
+    width:100%;
 }
 .footer a{
     font-size: 20px;
