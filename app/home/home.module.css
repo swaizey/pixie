@@ -1,6 +1,6 @@
 .home{
     overflow-y: auto;
-    heigth:80vh;
+    heigth:100% -200px;
 }
 .post{
     position: relative;
