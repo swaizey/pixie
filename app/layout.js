@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
         <UserProvider>
       
-        <div style={{heigth:'90vh'}}>{children}</div>
+        <div style={{heigth:'80vh'}}>{children}</div>
           <Footer />
   
         </UserProvider>
