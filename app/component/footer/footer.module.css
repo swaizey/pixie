@@ -6,7 +6,7 @@
     padding: 10px 15px;
     border-top:1px solid grey;
     background:red;
-      position: sticky;
+      position: absolute;
       bottom: 0;
 }
 .footer a{
