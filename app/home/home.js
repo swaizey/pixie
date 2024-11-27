@@ -8,6 +8,7 @@ import { IoIosShareAlt } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { MdMessage } from "react-icons/md";
 import Reactions from "@/app/component/reactions/Reactions";
+import Loader from "@/app/component/Loader.js;
 import { CgProfile } from "react-icons/cg";
 
 import logo from '@/app/assets/profileLogo.png'
@@ -85,7 +86,7 @@ const Homes = () => {
           }
         </div>
       ))}
-    
+      <Loader/>
       {erroMsg && <p>{erroMsg.msg}</p>}
       {<div className='heartbeat'></div>}
       {posts.length !== 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
