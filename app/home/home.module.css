@@ -1,7 +1,7 @@
 .home{
     overflow-y: auto;
     overflow-x: auto;
-    height:75vh;
+    height:80vh;
 }
 .heartbeat {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
