@@ -32,7 +32,7 @@ const Homes = () => {
   
   useEffect(()=>{
     const getPosts = async()=>{
-      
+      setLoading(true)
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
