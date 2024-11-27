@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index:400000;
 }
 .loader {
   color: rgb(230, 236, 230);
