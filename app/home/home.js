@@ -31,12 +31,13 @@ const Homes = () => {
   
   
   useEffect(()=>{
+    if(page ==0){
     const getPosts = async()=>{
       setLoading(true)
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
-        page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
+        setPosts(data) 
         setLoading(false)
       }else{
 
@@ -44,7 +45,25 @@ const Homes = () => {
       }
     }
     getPosts()
-    
+    }
+  },[])
+  
+  useEffect(()=>{
+    if(page > 0){
+    const getPosts = async()=>{
+      setLoading(true)
+      const res = await fetch(`/api/posts?page=${page}`)
+      if(res.ok){
+       const data = await res.json()
+       setPosts(prev => [...prev, ...data])
+        setLoading(false)
+      }else{
+
+        setErroMsg(data)
+      }
+    }
+    getPosts()
+    }
   },[page])
 
   const auto =  {autoplay: {
