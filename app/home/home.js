@@ -46,8 +46,8 @@ const Homes = () => {
         // page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
         // setLoading(false)
       }else{
-        const data = await res.json()
-        setErroMsg(data)
+        const data2 = await res.json()
+        setErroMsg(data2)
       }
     }
     getPosts()
