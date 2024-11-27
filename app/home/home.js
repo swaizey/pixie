@@ -25,16 +25,19 @@ const Homes = () => {
   const [posts, setPosts] =useState([])
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
+  const [loading, setLoading] =useState(false)
   const [postId, setPostId] =useState('')
  
   
   
   useEffect(()=>{
     const getPosts = async()=>{
+      setLoading(true)
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
         page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
+        setLoading(false)
       }else{
         const data = await res.json()
         setErroMsg(data)
@@ -50,7 +53,7 @@ const Homes = () => {
 
   return (
     <div className={Styles.home}>
-      {posts && posts?.map((post) => (
+      {loading ? <Loader/> : posts?.map((post) => (
         <div>
       
           {opened && <Reactions opened={opened} postId={postId} setPostId={setPostId} setOpened={setOpened}/>}
@@ -86,9 +89,9 @@ const Homes = () => {
           }
         </div>
       ))}
-      <Loader/>
+   
       {erroMsg && <p>{erroMsg.msg}</p>}
-      {<div className='heartbeat'></div>}
+     
       {posts.length !== 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
     </div>
   );
