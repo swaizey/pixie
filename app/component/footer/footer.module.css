@@ -1,14 +1,12 @@
 .footer{
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
+   
+    
     border-top:1px solid rgba(245, 241, 241, 0.452);
     position: fixed;
     bottom: 0;
     width:100vw;
     z-index:100000;
-    display: flex;
-    padding-right:20px;
+   
 }
 .footer a{
     font-size: 20px;
@@ -18,7 +16,12 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
+}
+.foot{
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+ padding: 10px 15px;
 }
 
 .footer a p{
