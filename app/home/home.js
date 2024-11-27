@@ -8,7 +8,7 @@ import { IoIosShareAlt } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { MdMessage } from "react-icons/md";
 import Reactions from "@/app/component/reactions/Reactions";
-import Loader from "@/app/component/Loader.js;
+import Loader from "@/app/component/Loader.js";
 import { CgProfile } from "react-icons/cg";
 
 import logo from '@/app/assets/profileLogo.png'
