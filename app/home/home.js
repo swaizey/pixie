@@ -112,7 +112,7 @@ const Homes = () => {
    
       {erroMsg && <p>{erroMsg.msg}</p>}
      
-    {!loading <button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button>}
+    {!loading && <button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button>}
     {!loading && posts.lenght > 0 ? <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p> : null}
     </div>
   );
