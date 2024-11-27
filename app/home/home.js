@@ -35,8 +35,8 @@ const Homes = () => {
       
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
-        const data = await res.json()
         if(page=0){
+        const data = await res.json()
           setLoading(true)
           setPosts(data)
           setLoading(false)
