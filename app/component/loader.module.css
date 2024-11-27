@@ -1,7 +1,15 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.452);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loader {
   color: rgb(230, 236, 230);
-  width: 4px;
-  aspect-ratio: 1;
+  width: 7px;
+  aspect-ratio: 2;
   border-radius: 50%;
   box-shadow: 19px 0 0 7px rgb(9, 9, 211), 38px 0 0 3px rgb(63, 30, 212), 57px 0 0 0 rgb(80, 2, 2);
   transform: translateX(-38px);
