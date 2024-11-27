@@ -26,6 +26,7 @@ const Homes = () => {
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
   const [loading, setLoading] =useState(false)
+  
   const [postId, setPostId] =useState('')
  
   
@@ -51,12 +52,12 @@ const Homes = () => {
   useEffect(()=>{
     if(page > 0){
     const getPosts = async()=>{
-      setLoading(true)
+
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
        const data = await res.json()
        setPosts(prev => [...prev, ...data])
-        setLoading(false)
+   
       }else{
 
         setErroMsg(data)
@@ -111,7 +112,8 @@ const Homes = () => {
    
       {erroMsg && <p>{erroMsg.msg}</p>}
      
-      {posts.length > 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
+    {!loading <button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button>}
+    {!loading && posts.lenght > 0 ? <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p> : null}
     </div>
   );
 };
