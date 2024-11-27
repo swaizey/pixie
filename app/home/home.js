@@ -40,14 +40,15 @@ const Homes = () => {
           setLoading(true)
           setPosts(data)
           setLoading(false)
-        }else{
+        }else if(page > 0){
+          const data = await res.json()
           setPosts(prev => [...prev, ...data])
         }
         // page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
         // setLoading(false)
       }else{
-        const data2 = await res.json()
-        setErroMsg(data2)
+        const data = await res.json()
+        setErroMsg(data)
       }
     }
     getPosts()
