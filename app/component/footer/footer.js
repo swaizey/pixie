@@ -29,7 +29,7 @@ const Footer = () => {
   },[session])
   return (
     <div className={Style.footer}>
-
+        <div className={Style.foot}>
       <Link className={pathame == '/' ? Style.bg : null} href={'/'}>
       <FiHome />
       <p>Home</p>
@@ -50,7 +50,7 @@ const Footer = () => {
       <FiUser />
       <p>Profile</p>
       </Link>
- 
+  </div>
     </div>
   );
 };
