@@ -87,7 +87,7 @@ const Homes = () => {
       ))}
     
       {erroMsg && <p>{erroMsg.msg}</p>}
-      {<div className='hu__hu__'>Pixie</div>}
+      {<div className='heartbeat'></div>}
       {posts.length !== 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
     </div>
   );
