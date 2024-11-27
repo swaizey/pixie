@@ -32,12 +32,19 @@ const Homes = () => {
   
   useEffect(()=>{
     const getPosts = async()=>{
-      setLoading(true)
+      
       const res = await fetch(`/api/posts?page=${page}`)
       if(res.ok){
         const data = await res.json()
-        page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
-        setLoading(false)
+        if(page=0){
+          setLoading(true)
+          setPosts(data)
+          setLoading(false)
+        }else{
+          setPosts(prev => [...prev, ...data])
+        }
+        // page ==0 ? setPosts(data) : setPosts(prev => [...prev, ...data])
+        // setLoading(false)
       }else{
         const data = await res.json()
         setErroMsg(data)
@@ -92,7 +99,7 @@ const Homes = () => {
    
       {erroMsg && <p>{erroMsg.msg}</p>}
      
-      {posts.length !== 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
+      {posts.length > 0 ?<button className={Styles.btn} onClick={()=>setPage(page+1)}>Load More</button> : <p style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Loading...</p>}
     </div>
   );
 };
