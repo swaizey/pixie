@@ -1,5 +1,5 @@
 .chat{
-    height: 80vh;
+    height: calc(85vh - 75px);
     overflow-y: auto;
     background-color: rgb(245, 242, 242);
     display: grid;
