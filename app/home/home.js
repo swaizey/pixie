@@ -26,6 +26,7 @@ const Homes = () => {
   const [erroMsg, setErroMsg] =useState('')
   const [opened, setOpened] =useState(false)
   const [loading, setLoading] =useState(false)
+  const [loaded, setLoaded] =useState(true)
   
   const [postId, setPostId] =useState('')
  
@@ -66,6 +67,10 @@ const Homes = () => {
     getPosts()
     }
   },[page])
+
+  document.addEventListener('DOMContentLoaded', function() {
+  setLoaded(false)
+});
 
   const auto =  {autoplay: {
     delay: 1000,
@@ -112,7 +117,7 @@ const Homes = () => {
    
       {erroMsg && <p>{erroMsg.msg}</p>}
      
-    {!loading && <button className={Styles.btn} onClick={()=>setPage(page+1)}>{loading ? 'Loading...' :'Load more'}</button>}
+    {!loaded && <button className={Styles.btn} onClick={()=>setPage(page+1)}>{loading ? 'Loading...' :'Load more'}</button>}
     
     </div>
   );
