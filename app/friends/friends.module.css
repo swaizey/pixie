@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 70px calc(85vh - 70px);
     width: 100%;
+    overflow-y:hidden;
   }
 
 .friendNav{
