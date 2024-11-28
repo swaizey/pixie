@@ -9,6 +9,7 @@
 }
 
 .sendMdg input{
+    flex:1;
     border: none;
     outline: none;
     width: 80%;
