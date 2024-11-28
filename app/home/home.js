@@ -41,6 +41,7 @@ const Homes = () => {
         const data = await res.json()
         setPosts(data) 
         setLoading(false)
+        setLoaded(true)
       }else{
 
         setErroMsg(data)
@@ -67,10 +68,6 @@ const Homes = () => {
     getPosts()
     }
   },[page])
-
-  document.addEventListener('DOMContentLoaded', function() {
-  setLoaded(true)
-});
 
   const auto =  {autoplay: {
     delay: 1000,
