@@ -1,7 +1,6 @@
 .home{
     display: grid;
-    grid-template-rows: 70px auto;
-    overflow-y: hidden;
+    grid-template-rows: 70px calc(85vh - 70px);
     width: 100%;
   }
 
