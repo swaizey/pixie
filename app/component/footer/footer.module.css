@@ -4,7 +4,7 @@
     bottom: 0;
     width:100vw;
     z-index:100000;
-    background-color:white;
+    background-color:red;
 }
 .footer a{
     font-size: 20px;
