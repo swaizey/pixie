@@ -1,5 +1,5 @@
 .home{
-    overflow-y: hidden;
+    overflow-y: auto;
     height:calc(85vh - 75px);
 }
 .post{
