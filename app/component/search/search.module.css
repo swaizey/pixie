@@ -4,6 +4,7 @@
     position: absolute;
     width: 100%;
     z-index: 1000;
+    overflow-y:auto;
     left:-20000px ;
 }
 .search.ent{
