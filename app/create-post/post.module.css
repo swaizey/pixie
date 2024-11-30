@@ -8,7 +8,7 @@
 .my-webcam-class{
     height: 100%;
 }
-.photo-button {
+.photo {
   width: 100px;
   height: 100px;
   top: 50%;
@@ -38,28 +38,19 @@
   border: 0.5em solid #ffffff;
   opacity: 0.8;
 }
-.photo-button .circle, .photo-button .ring {
+.photo .circle, .photo .ring {
   transition: all 0.25s;
 }
-.photo-button:hover .circle {
+.photo:hover .circle {
   opacity: 1;
 }
-.photo-button:active .ring {
+.photo:active .ring {
   opacity: 1;
 }
-.photo-button:active .circle {
+.photo:active .circle {
   opacity: 0.5;
 }
-.btn{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(75, 2, 2, 0.5);
-    
-}
+
 
 .re{
     position: absolute;
