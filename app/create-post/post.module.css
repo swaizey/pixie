@@ -1,6 +1,4 @@
-.cam{
-   
- 
+.cam{ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +9,7 @@
 .photo {
   width: 100px;
   height: 100px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   margin-top: -50px;
   margin-left: -50px;
