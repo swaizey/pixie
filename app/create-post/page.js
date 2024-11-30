@@ -118,7 +118,7 @@ const page = () => {
       {src && <img src={src} />}
       {!src && (
         <div className={Styles.cam}>
-          <Webcam videoConstraints={videoConstraints} ref={webcamRef}
+          <Webcam mirrored={true} videoConstraints={videoConstraints} ref={webcamRef}
              style={{
             
                 textAlign: "center",
