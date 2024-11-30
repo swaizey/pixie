@@ -48,7 +48,8 @@ export async function GET(req){
           }},
           {
             $unset:["userInfo[0].password", "userInfo.password", "userInfo[1].verificationToken", "userInfo.verificationToken", "userOne", "userTwo"]
-          }
+          },
+        {$sort:{createdAt:-1}}
     ])
     return NextResponse.json(chat)
 
