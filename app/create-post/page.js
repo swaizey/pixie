@@ -140,10 +140,10 @@ const page = () => {
 
       {!src && (
 
-         <button className={Styles.photo}>
+         <div className={Styles.photo}>
           <button onClick={getImg} className={Styles.circle}></button>
-          <button className={Styles.ring}></button>
-          </button>
+          <div className={Styles.ring}></div>
+          </div>
       )}
       {src && (
         <button className={Styles.re}>
