@@ -81,6 +81,7 @@ const page = () => {
       </Swiper>
 
       <div className={Styles.message}>
+      <div className={Styles.m}>
         {session &&
           chats?.map((msg) => (
             <>
@@ -117,6 +118,7 @@ const page = () => {
               </Link>
             </>
           ))}
+            </div>
       </div>
     </div>
   );
