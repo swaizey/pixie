@@ -27,9 +27,9 @@ import { useRouter } from "next/navigation";
 const page = () => {
   const { data: session } = useSession();
   const router = useRouter()
-  // if(!session){
-  //   router.push('/login')
-  // }
+  if(!session){
+    router.push('/login')
+  }
 
   const [status, setStatus] = useState([
     { username: "Sly", pic: logo1 },
