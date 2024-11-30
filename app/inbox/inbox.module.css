@@ -1,11 +1,10 @@
 .m{
-    overflow-y:auto;
-      width: 100%;
-    height:80vh;
+ 
 }
 .message{
-  
-
+    overflow-y:auto;
+    width: 100%;
+    height:calc(90vh - 75px);
 }
 .msg{
     overflow-y: auto;
