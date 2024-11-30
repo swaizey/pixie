@@ -12,8 +12,7 @@
 .btn{
     position: absolute;
     top: 70%;
-    left: -50%;
-    right: -50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     border: none;
     background-color: rgba(75, 2, 2, 0.5);
