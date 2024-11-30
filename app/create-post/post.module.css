@@ -9,7 +9,7 @@
 .photo {
   width: 60px;
   height: 60px;
-  top: 80%;
+  top: 75%;
   left: 50%;
   margin-top: -50px;
   margin-left: -50px;
@@ -17,13 +17,13 @@
 }
 .circle {
   position: absolute;
-  top: 12%;
-  left: 12%;
-  bottom: 12%;
-  right: 12%;
+  top: 9%;
+  left: 9%;
+  bottom: 9%;
+  right: 9%;
   border-radius: 100%;
   background-color: #ffffff;
-  opacity: 0;
+  
 }
 .ring {
   position: absolute;
@@ -33,7 +33,7 @@
   right: 0;
   
   border-radius: 100%;
-  border: 0.5em solid #ffffff;
+  border: 5px solid #ffffff;
   opacity: 0.8;
 }
 .photo .circle, .photo .ring {
