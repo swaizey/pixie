@@ -5,6 +5,7 @@ import UploadWiget from "../component/uploadWiget";
 import Webcam from "react-webcam";
 import { Cloudinary } from "@cloudinary/url-gen";
 import Styles from "@/app/create-post/post.module.css";
+import { useSession } from "next-auth/react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TiArrowBackOutline } from "react-icons/ti";
@@ -19,8 +20,13 @@ import "./style.css";
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import { useRouter } from "next/navigation";
+
 const page = () => {
+    const { data: session } = useSession();
   const router = useRouter()
+  if(!session){
+    router.push('/login')
+  }
   const [screenshot, setScreenshot] = useState();
   const [cldData, setCldData] = useState();
   const [filter, setFilter] = useState();
