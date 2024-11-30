@@ -110,13 +110,15 @@ const page = () => {
       router.push('/')
      }
   }
- 
+  const videoConstraints = {
+      facingMode: "user"
+    };
   return (
     <div>
       {src && <img src={src} />}
       {!src && (
         <div className={Styles.cam}>
-          <Webcam ref={webcamRef}
+          <Webcam videoConstraints={videoConstraints} ref={webcamRef}
              style={{
             
                 textAlign: "center",
