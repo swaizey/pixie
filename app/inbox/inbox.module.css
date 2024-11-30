@@ -1,7 +1,10 @@
-
+.m{
+    overflow-y:auto;
+      width: 100%;
+}
 .message{
-    width: 100%;
-    background:red;
+  
+
 }
 .msg{
     overflow-y: auto;
