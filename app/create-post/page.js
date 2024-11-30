@@ -139,9 +139,11 @@ const page = () => {
       )}
 
       {!src && (
- 
-          <button className={Styles.btn} onClick={getImg}></button>
-    
+
+         <div className={Styles.photo}>
+          <div onClick={getImg} className={Styles.circle}></div>
+          <div className={Styles.ring}></div>
+          </div>
       )}
       {src && (
         <button className={Styles.re}>
@@ -175,7 +177,7 @@ const page = () => {
                     .toURL()}
                 />
                 <p>{filt}</p>
-                {console.log(cloudImg?.effect(`e_art:${filt}`).toURL())}
+               
               </button>
             </SwiperSlide>
           ))}
