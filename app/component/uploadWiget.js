@@ -34,7 +34,7 @@ const UploadWiget = ({galleryImg, setGalleryImg}) => {
       <button onClick={() => widgetRef.current.open()}>Gallary</button>
       {galleryImg?.map((i) => (
         <>
-          <Image style={{marginRight:'5px'}} src={i?.secure_url} height={70} width={70} alt="img" />
+          <Image style={{marginRight:'5px', objectFit:'cover', bordarRadius:'10px'}} src={i?.secure_url} height={70} width={70} alt="img" />
 
           <button onClick={(e)=> removePx(i)}>X</button>
         </>
