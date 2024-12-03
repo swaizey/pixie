@@ -24,9 +24,9 @@
     top: 60%;
     left: 60%;
     margin-left: 70px;
-    background: none;
+    border-radius:10px;
     border: none;
     color: white;
     font-size: 40px;
-   background-color:red;
+   background-color:rgba(255,255,255,.0.8);
 }
