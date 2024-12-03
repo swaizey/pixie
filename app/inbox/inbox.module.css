@@ -2,10 +2,10 @@
 .message{
     overflow-y:auto;
     width: 100%;
-    height:calc(90vh - 75px);
+    height:calc(75vh - 75px);
 }
 .msg{
-    overflow-y: auto;
+  
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
