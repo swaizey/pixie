@@ -21,7 +21,7 @@
 
 .re{
     position: absolute;
-    padding:0;
+    padding-bottom:-2px;
     top: 60%;
     left: 60%;
     margin-left: 70px;
