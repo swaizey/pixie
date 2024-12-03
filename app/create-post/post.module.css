@@ -17,39 +17,15 @@
 }
 .circle {
   position: absolute;
-  width:90px;
-  height:90px;
+  width:80px;
+  height:80px;
   border-radius: 100%;
-  top: 80%;
+  top: 75%;
   left: 50%;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
   
 }
-.ring {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  
-  border-radius: 100%;
-  border: 5px solid #ffffff;
-  opacity: 0.8;
-}
-.photo .circle, .photo .ring {
-  transition: all 0.25s;
-}
-.photo:hover .circle {
-  opacity: 1;
-}
-.photo:active .ring {
-  opacity: 1;
-}
-.photo:active .circle {
-  opacity: 0.5;
-}
-
 
 .re{
     position: absolute;
