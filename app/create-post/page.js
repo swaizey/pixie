@@ -31,7 +31,6 @@ const page = () => {
   const [cldData, setCldData] = useState();
   const [filter, setFilter] = useState();
   const [post, setPost] =useState('')
-  const [imgTest, setImgTest] =useState('')
   const [galleryImg, setGalleryImg] =useState([])
   const webcamRef = useRef();
   const {user, setUser} = useContext(UserContext)
@@ -93,7 +92,7 @@ const page = () => {
   ];
 
   const getImg = () => {
-      setImgTest('img..')
+
     const img = webcamRef.current.getScreenshot();
     setScreenshot(img);
   };
@@ -123,7 +122,7 @@ const page = () => {
     };
   return (
     <div>
-      {<p>{imgTest}</p>}
+     
       {src && <img src={src} />}
       {!src && (
         <div className={Styles.cam}>
@@ -133,7 +132,7 @@ const page = () => {
                 textAlign: "center",
                 zindex: 8,
                 right:0,
-                height: "80vh",
+                height: "75vh",
                  width: "100%",
                  objectFit: "fill",
               }}
@@ -144,9 +143,7 @@ const page = () => {
       {!src && (
 
           <button onClick={getImg} className={Styles.circle}></button>
-         // <div className={Styles.photo}>
-         //  <div className={Styles.ring}></div>
-         //  </div>
+    
       )}
       {src && (
         <button className={Styles.re}>
