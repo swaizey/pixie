@@ -191,7 +191,10 @@ const page = () => {
           />
           <button>Submit</button>
       </form>
+              <div style={{overflowY:"auto"}}>
+
       <UploadWiget galleryImg={galleryImg} setGalleryImg={setGalleryImg} />
+              </div>
     </div>
   );
 };
