@@ -151,7 +151,7 @@ const page = () => {
           <IoArrowBack  onClick={reset} />
         </button>
       )}
-      <div style={{overflowY:"auto"}}>
+      <div className={Styles.flow}>
       {src && (
         <Swiper
           slidesPerView={7}
