@@ -150,6 +150,7 @@ const page = () => {
           <TiArrowBackOutline onClick={reset} />
         </button>
       )}
+      <div style={{overflowY:"auto"}}>
       {src && (
         <Swiper
           slidesPerView={7}
@@ -191,10 +192,8 @@ const page = () => {
           />
           <button>Submit</button>
       </form>
-              <div style={{overflowY:"auto"}}>
-
       <UploadWiget galleryImg={galleryImg} setGalleryImg={setGalleryImg} />
-              </div>
+        </div>
     </div>
   );
 };
