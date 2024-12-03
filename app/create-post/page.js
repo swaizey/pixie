@@ -8,7 +8,8 @@ import Styles from "@/app/create-post/post.module.css";
 import { useSession } from "next-auth/react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { TiArrowBackOutline } from "react-icons/ti";
+import { IoArrowBack } from "react-icons/io5";
+
 import { UserContext } from '@/app/UserContext'
 // Import Swiper styles
 import "swiper/css";
@@ -147,7 +148,7 @@ const page = () => {
       )}
       {src && (
         <button className={Styles.re}>
-          <TiArrowBackOutline onClick={reset} />
+          <IoArrowBack  onClick={reset} />
         </button>
       )}
       <div style={{overflowY:"auto"}}>
