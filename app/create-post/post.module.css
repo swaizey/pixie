@@ -6,15 +6,7 @@
 .my-webcam-class{
     height: 100%;
 }
-.photo {
-  width: 60px;
-  height: 60px;
-  top: 75%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  position: absolute;
-}
+
 .circle {
   position: absolute;
   width:80px;
@@ -29,11 +21,12 @@
 
 .re{
     position: absolute;
-    top: 53%;
+    top: 76%;
     left: 60%;
     margin-left: 70px;
     background: none;
     border: none;
     color: white;
     font-size: 40px;
+    background:rgba(0,0,0,0.6);
 }
