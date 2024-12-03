@@ -133,7 +133,7 @@ const page = () => {
                 textAlign: "center",
                 zindex: 8,
                 right:0,
-                height: "75vh",
+                height: "60vh",
                  width: "100%",
                  objectFit: "fill",
               }}
