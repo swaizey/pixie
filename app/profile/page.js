@@ -24,7 +24,7 @@ const page = () => {
   return (
     <div className={Styles.profileContainer}>
       <div className={Styles.info}>
-        <Link href={'/profilepic'}>{<Image  src={user?.profilePic == '' || undefined ? logo : user?.profilePic} width={100} height={100} />}</Link>
+        <Link href={'/profilepic'}>{<Image style={{objecFit:'cover'}}  src={user?.profilePic == '' || undefined ? logo : user?.profilePic} width={100} height={100} />}</Link>
         <p style={{color:'grey'}}>@{user.username}</p>
         
         <div>
