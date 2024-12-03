@@ -21,12 +21,12 @@
 
 .re{
     position: absolute;
-    top: 76%;
+    top: 60%;
     left: 60%;
     margin-left: 70px;
     background: none;
     border: none;
     color: white;
     font-size: 40px;
-    background:rgba(0,0,0,0.6);
+   background-color:red;
 }
